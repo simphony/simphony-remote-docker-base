@@ -21,5 +21,5 @@ Docker image names
 
 1. ``simphonyproject/ubuntu-<ubuntu-version>-<wrapper>:{version}``
          Ubuntu of a given version, together with the given wrapper.
-         Example ``simphonyproject/ubuntu-14.04-webapp:v0.3.0``
+         Example ``simphonyproject/ubuntu-14.04-webapp:0.3.0``
 

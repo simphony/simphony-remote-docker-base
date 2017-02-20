@@ -1,1 +1,0 @@
-# simphony-remote-docker-base
