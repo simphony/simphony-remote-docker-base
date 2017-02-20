@@ -7,4 +7,5 @@ Release 0.6.0
 Features
 ~~~~~~~~
 
-- Migration to independent repository
+- Migration to independent repository.
+- Setup automated build on docker hub against the new repo
