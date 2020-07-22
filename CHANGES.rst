@@ -6,7 +6,7 @@ Release 0.7.0.dev0
 
 Features
 ~~~~~~~~
-
+- Support for Ubuntu 18
 
 Release 0.6.0
 -------------
