@@ -53,7 +53,7 @@ id -u $USER &>/dev/null || useradd --home-dir "/home/$USER" --shell /bin/bash --
 # the directory is already there, as in the case someone mounted an external volume under the
 # home directory.
 mkdir -p "/home/$USER"
-rsync -r /etc/skel/ "/home/$USER"
+rsync -rl /etc/skel/ "/home/$USER"
 chown -R $USER:$USER "/home/$USER"
 tar -C /etc/skel --owner=$USER --group=$USER --one-file-system -cvf - . | tar -C /home/$USER -x --same-owner
 echo "$USER:$USER" | chpasswd
@@ -62,6 +62,9 @@ echo "$USER:$USER" | chpasswd
 if [ -e /workspace ]; then
     chmod 777 /workspace
 fi
+
+export LC_ALL=C.UTF-8
+export LANG=C.UTF-8
 
 # Parse the templates and put their result in the appropriate places
 cat /templates/nginx.conf.template | envsubst '$JPY_BASE_USER_URL $URL_ID' > /etc/nginx/sites-enabled/default
